@@ -1,0 +1,294 @@
+{
+  "brand": {
+    "category": "Venue Operations Software"
+  },
+  "meta": {
+    "title": "PlayWatch | Venue Operations Software",
+    "description": "PlayWatch helps entertainment venues simplify daily operations, keep track of activities and sessions, and give teams better visibility. Request free early access."
+  },
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skip": "Skip to content"
+  },
+  "cta": {
+    "requestTrial": "Request a Free Trial",
+    "exploreSolutions": "Explore Solutions",
+    "discoverSolution": "Discover This Solution",
+    "callAccess": "Call Us to Request Free Access",
+    "contact": "Contact PlayWatch",
+    "langEn": "EN",
+    "langAr": "AR"
+  },
+  "hero": {
+    "title": "Run Your Venue. Not the Chaos.",
+    "body": "Manage sessions, coordinate daily activities, and gain better visibility into your venue's operations with software designed around the way entertainment businesses work."
+  },
+  "preview": {
+    "conceptBadge": "Concept preview",
+    "disclaimer": "Conceptual product preview. This is not a screenshot of a currently released application.",
+    "tabs": {
+      "floor": "Floor",
+      "sessions": "Sessions",
+      "schedule": "Schedule"
+    },
+    "floor": {
+      "live": "Live floor",
+      "clock": "19:24"
+    },
+    "status": {
+      "occupied": "Occupied",
+      "available": "Available",
+      "reserved": "Reserved"
+    },
+    "tables": {
+      "t1": "Table 1",
+      "t1Meta": "00:42:18",
+      "t2": "Table 2",
+      "t2Meta": "Walk-in ready",
+      "t3": "Table 3",
+      "t3Meta": "01:08:22",
+      "t4": "Table 4",
+      "t4Meta": "20:00 hold",
+      "t5": "Table 5",
+      "t5Meta": "00:17:04",
+      "t6": "Table 6",
+      "t6Meta": "Open"
+    },
+    "summary": {
+      "title": "Daily activity",
+      "sessions": "Sessions",
+      "sessionsValue": "18",
+      "occupied": "Occupied",
+      "occupiedValue": "5",
+      "reserved": "Reserved",
+      "reservedValue": "4"
+    },
+    "reservations": {
+      "title": "Upcoming",
+      "r1": "Table 4 · Group booking",
+      "r1Meta": "20:00 · walk-in held",
+      "r2": "Arena A · Birthday party",
+      "r2Meta": "18:30 · 12 participants",
+      "r3": "Zone 2 · Timed session",
+      "r3Meta": "19:15 · 45 minutes"
+    },
+    "sessionRows": {
+      "s1": "Table 1 in progress",
+      "s1Meta": "Started 16:12 · Staff: floor",
+      "s2": "Table 3 in progress",
+      "s2Meta": "Started 15:46 · Staff: floor",
+      "s3": "Arena session closed",
+      "s3Meta": "Duration captured · history saved",
+      "s4": "Zone check-in open",
+      "s4Meta": "Waiting for next group",
+      "timer": "00:42"
+    },
+    "operations": {
+      "o1": "Equipment ready",
+      "o1Meta": "Harness check complete",
+      "o2": "Shift handover note",
+      "o2Meta": "Open sessions listed",
+      "o3": "Issue logged",
+      "o3Meta": "Table 6 light reported"
+    },
+    "reports": {
+      "title": "Resource utilization concept",
+      "d1": "Mon",
+      "d2": "Tue",
+      "d3": "Wed",
+      "d4": "Thu",
+      "d5": "Fri",
+      "d6": "Sat",
+      "d7": "Sun"
+    }
+  },
+  "positioning": {
+    "eyebrow": "What PlayWatch is",
+    "title": "Built Around the Way Your Venue Operates",
+    "body": "Every venue has its own daily rhythm. PlayWatch aims to make that work easier by organizing the activities, sessions, and operational information your team needs to keep things moving.",
+    "values": {
+      "visibilityTitle": "Better operational visibility",
+      "visibilityBody": "See which tables, arenas, or activity zones are busy, reserved, or ready so your team can make clearer decisions during the day.",
+      "workflowsTitle": "Simpler daily workflows",
+      "workflowsBody": "Give staff a shared place to start sessions, coordinate groups, and pass information between shifts without relying only on paper or memory.",
+      "sessionsTitle": "More organized session management",
+      "sessionsBody": "Keep session start and end times, duration, and history in one operational view designed for entertainment venues."
+    }
+  },
+  "industries": {
+    "eyebrow": "Industries we serve",
+    "title": "Software shaped around entertainment venues",
+    "body": "PlayWatch is being developed for independently owned entertainment and activity businesses. Billiards and snooker clubs are our first validation market, with paintball, laser tag, and indoor activity centers as planned directions.",
+    "plannedNote": "Industry-specific workflows are planned product directions. Not every capability is implemented yet, and we will confirm what can be piloted with each venue.",
+    "billiards": {
+      "name": "Billiards and Snooker Clubs",
+      "description": "Help club teams see which tables are in use, keep session times organized, and hand over a clearer picture of the floor at the end of a shift.",
+      "imageAlt": "Empty billiards hall with numbered pool tables under hanging lights",
+      "badge": "Initial validation market",
+      "workflow1": "Live table availability",
+      "workflow2": "Session start, end, duration, and charge calculation",
+      "workflow3": "Table reservations and walk-ins",
+      "workflow4": "Daily operational summaries and table utilization",
+      "workflow5": "Shift handovers and session history"
+    },
+    "paintball": {
+      "name": "Paintball and Laser Tag Arenas",
+      "description": "Help operators coordinate games, groups, staff, and equipment with clearer session timing and turnaround between parties.",
+      "imageAlt": "Dark arena lighting with cyan laser beams used as a conceptual laser-tag visual",
+      "badge": "Planned direction",
+      "workflow1": "Group and party booking coordination",
+      "workflow2": "Game-session scheduling and participant check-in",
+      "workflow3": "Equipment readiness tracking",
+      "workflow4": "Session timing, turnaround, and operational issue tracking"
+    },
+    "trampoline": {
+      "name": "Trampoline Parks and Indoor Activity Centers",
+      "description": "Help managers keep timed activities, birthday parties, and staff coordination visible across the floor without extra complexity.",
+      "imageAlt": "Indoor activity center with foam pit, hanging pads, and empty play zones",
+      "badge": "Planned direction",
+      "workflow1": "Timed activities and session tracking",
+      "workflow2": "Group and birthday-party coordination",
+      "workflow3": "Participant check-in and activity-zone scheduling",
+      "workflow4": "Staff coordination and operational or safety-check records"
+    }
+  },
+  "challenges": {
+    "eyebrow": "Operational challenges",
+    "title": "Less Time Managing the Process. More Time Running Your Venue.",
+    "body": "These are common operational challenges entertainment venues can face. PlayWatch aims to help address them. We do not assume every club or arena has the same issues.",
+    "items": {
+      "sessions": {
+        "title": "Losing track of active sessions",
+        "body": "When several tables or games are running at once, tracking start and end times by hand can become inconvenient.",
+        "help": "A planned session workflow would let staff start, finish, and review duration from one shared view instead of reconstructing the day later."
+      },
+      "availability": {
+        "title": "Knowing what is available right now",
+        "body": "Staff need a clear picture of which tables, arenas, or activity zones are occupied, reserved, or ready for the next guest.",
+        "help": "A live status board is a planned way to show occupancy and reservations so the floor team can make quicker, calmer decisions."
+      },
+      "groups": {
+        "title": "Coordinating groups and daily schedules",
+        "body": "Parties, walk-ins, and timed games can overlap. Coordinating people, equipment, and start times is often done across notes and conversations.",
+        "help": "Planned reservation and scheduling workflows would keep groups, sessions, and walk-ins in one operational calendar."
+      },
+      "records": {
+        "title": "Relying on manual session history",
+        "body": "Paper notes and memory can make shift handovers and later reconciliation more difficult than they need to be.",
+        "help": "Session history and handover records are planned so the next shift can see what is still open and what already closed."
+      },
+      "visibility": {
+        "title": "Limited view of daily venue activity",
+        "body": "Owners and managers often want a clearer picture of how tables or activities were used during the day, without waiting for a full software suite.",
+        "help": "Planned operational summaries would present daily activity and resource utilization in plain language."
+      }
+    }
+  },
+  "offers": {
+    "eyebrow": "Planned capabilities",
+    "title": "What PlayWatch is building",
+    "body": "These capability groups describe the product direction we are validating with venue owners. They are concepts and planned workflows, not a promise of a finished platform.",
+    "planned": "Planned capability",
+    "sessions": {
+      "title": "Session Management",
+      "body": "Give the floor team a practical way to run the session in front of them.",
+      "item1": "Start and finish sessions",
+      "item2": "Track duration",
+      "item3": "View current activity status",
+      "item4": "Review session history"
+    },
+    "reservations": {
+      "title": "Reservations and Scheduling",
+      "body": "Keep bookings, walk-ins, and group activities easier to coordinate.",
+      "item1": "Organize reservations and walk-ins",
+      "item2": "Coordinate groups and activities",
+      "item3": "View scheduled sessions"
+    },
+    "operations": {
+      "title": "Venue Operations",
+      "body": "Support the work that happens around the session itself.",
+      "item1": "Track operational tasks and issues",
+      "item2": "Coordinate staff workflows",
+      "item3": "Maintain useful operational records"
+    },
+    "reports": {
+      "title": "Reports and Visibility",
+      "body": "Help owners and managers understand the day without dense technical reports.",
+      "item1": "Review daily activity",
+      "item2": "Understand resource utilization",
+      "item3": "Access clear operational summaries"
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "A practical path from conversation to pilot",
+    "note": "Exact trial availability and terms will be confirmed directly with your business. Eligible early-access venues can try an agreed workflow and share feedback before broader release.",
+    "step1": {
+      "title": "Tell Us About Your Venue.",
+      "body": "We learn about your venue, how your team works, and the challenges you want to solve."
+    },
+    "step2": {
+      "title": "Explore the Right Solution.",
+      "body": "We show you the relevant workflows and discuss how PlayWatch could fit your operations."
+    },
+    "step3": {
+      "title": "Start Your Free Pilot.",
+      "body": "Eligible early-access venues can try the agreed workflow and share feedback before broader release."
+    }
+  },
+  "trial": {
+    "eyebrow": "Free early access",
+    "title": "Be Among the First to Experience PlayWatch",
+    "body": "We're working with entertainment venues to shape practical software around real operational needs. Contact us to discuss free early access, see the proposed workflows, and find out whether your venue is a good fit for the pilot.",
+    "phoneLabel": "Call PlayWatch",
+    "phoneHelp": "Phone is the primary way to request a free trial or early-access pilot. We will discuss fit, scope, and timing with you directly."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "body": "PlayWatch is being validated and developed with venue owners. If your question is not listed, call us and we will walk through it.",
+    "items": {
+      "what": {
+        "q": "What is PlayWatch?",
+        "a": "PlayWatch is venue operations software being designed for independently owned entertainment and activity businesses. It aims to help teams manage sessions, coordinate daily activities, and see what is happening across the venue."
+      },
+      "venues": {
+        "q": "Which types of venues are you targeting?",
+        "a": "Our first validation market is billiards and snooker clubs. We are also exploring paintball and laser tag arenas, plus trampoline parks and indoor activity centers as planned directions."
+      },
+      "pilot": {
+        "q": "What does the free pilot include?",
+        "a": "Pilot scope, timing, and the exact workflow are discussed directly with each business. We do not advertise a fixed trial length or a guaranteed feature list in advance."
+      },
+      "adapt": {
+        "q": "Can the solution be adapted to our venue?",
+        "a": "That is part of the conversation. We learn how your team works and explore whether the planned PlayWatch workflows can fit your operations before any pilot begins."
+      },
+      "request": {
+        "q": "How do we request access?",
+        "a": "Call us. Phone is our primary contact channel. We will talk through your venue, the challenges you want to solve, and whether early access is a good fit."
+      },
+      "technical": {
+        "q": "Do we need technical knowledge to use it?",
+        "a": "No. PlayWatch is being designed for venue owners and staff who want clear operational tools, not software jargon. We will explain every workflow in plain language."
+      }
+    }
+  },
+  "final": {
+    "title": "Let's Make Running Your Venue Simpler.",
+    "body": "Tell us about your venue and the challenges you want to solve. Let's explore whether PlayWatch is the right fit."
+  },
+  "footer": {
+    "description": "PlayWatch is designed to help entertainment venues simplify daily operations, keep track of activities and sessions, and give their teams better visibility into what's happening across the venue.",
+    "explore": "Explore",
+    "industries": "Industries",
+    "copyright": "© {{year}} {{name}}",
+    "note": "Brand name and domain are pending confirmation."
+  }
+}

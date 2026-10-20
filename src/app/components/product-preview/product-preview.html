@@ -1,0 +1,163 @@
+<div class="mock-screen">
+  <div class="flex items-center justify-between gap-2 border-b border-line bg-white px-2.5 py-2 sm:px-4 sm:py-2.5">
+    <div class="flex min-w-0 items-center gap-1.5">
+      <span class="h-2 w-2 shrink-0 rounded-full bg-red-400"></span>
+      <span class="h-2 w-2 shrink-0 rounded-full bg-amber-400"></span>
+      <span class="h-2 w-2 shrink-0 rounded-full bg-emerald-400"></span>
+      <span class="ms-1 truncate text-[11px] font-bold tracking-tight text-navy sm:text-xs">PlayWatch</span>
+    </div>
+    @if (!compact()) {
+      <div class="mock-tabs rounded-full bg-soft p-0.5 text-[10px] font-bold">
+        <span class="rounded-full bg-white px-2.5 py-1 text-navy shadow-sm">{{ 'preview.tabs.floor' | translate }}</span>
+        <span class="px-2.5 py-1 text-muted">{{ 'preview.tabs.sessions' | translate }}</span>
+        <span class="px-2.5 py-1 text-muted">{{ 'preview.tabs.schedule' | translate }}</span>
+      </div>
+    }
+    <span class="max-w-[42%] shrink-0 truncate rounded-full bg-cyan/10 px-2 py-1 text-[9px] font-bold tracking-wide text-cyan-ink uppercase sm:max-w-none sm:text-[10px]">
+      {{ 'preview.conceptBadge' | translate }}
+    </span>
+  </div>
+
+  @if (kind() === 'floor') {
+    <div class="flex items-center justify-between gap-2 border-b border-line bg-white px-2.5 py-1.5 sm:px-4 sm:py-2">
+      <div class="flex min-w-0 items-center gap-2 text-[11px] font-bold text-navy sm:text-xs">
+        <span class="live-dot shrink-0"></span>
+        <span class="truncate">{{ 'preview.floor.live' | translate }}</span>
+      </div>
+      <span class="shrink-0 font-mono text-[10px] font-semibold text-muted sm:text-[11px]">
+        {{ 'preview.floor.clock' | translate }}
+      </span>
+    </div>
+    <div class="mock-floor-grid gap-2 p-2 sm:gap-3 sm:p-3 lg:p-4">
+      <div class="mock-table-grid gap-1.5 sm:gap-2">
+        @for (table of tables; track table.nameKey) {
+          <article
+            class="min-w-0 rounded-lg border bg-white p-2 sm:rounded-xl sm:p-3"
+            [class.flex]="!table.wide"
+            [class.flex-col]="!table.wide"
+            [class.mock-wide-table]="table.wide"
+            [class.border-red-200]="table.status === 'occupied'"
+            [class.border-emerald-200]="table.status === 'available'"
+            [class.border-sky-200]="table.status === 'reserved'"
+          >
+            <div class="flex items-center justify-between gap-1">
+              <p class="min-w-0 truncate text-[11px] font-bold text-navy sm:text-xs">{{ table.nameKey | translate }}</p>
+              <span
+                class="max-w-[52%] shrink-0 truncate rounded-full px-1.5 py-0.5 text-[8px] font-bold tracking-wide uppercase sm:text-[9px]"
+                [class.status-occupied]="table.status === 'occupied'"
+                [class.status-available]="table.status === 'available'"
+                [class.status-reserved]="table.status === 'reserved'"
+              >
+                {{ table.statusKey | translate }}
+              </span>
+            </div>
+            <p class="mt-1.5 truncate font-mono text-xs font-semibold tracking-tight text-ink sm:mt-2 sm:text-sm">
+              {{ table.metaKey | translate }}
+            </p>
+            <div class="mt-2 sm:mt-3">
+              <div class="h-1 overflow-hidden rounded-full bg-slate-100">
+                <div
+                  class="h-full rounded-full"
+                  [style.width.%]="table.fill"
+                  [class.bg-red-400]="table.status === 'occupied'"
+                  [class.bg-emerald-400]="table.status === 'available'"
+                  [class.bg-sky-400]="table.status === 'reserved'"
+                ></div>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+      <aside class="grid min-w-0 gap-2">
+        <div class="rounded-lg bg-navy p-2.5 text-white sm:rounded-xl sm:p-3">
+          <p class="text-[9px] font-bold tracking-[0.14em] text-cyan uppercase sm:text-[10px]">
+            {{ 'preview.summary.title' | translate }}
+          </p>
+          <div class="mt-2 grid grid-cols-3 gap-1.5 sm:mt-3 sm:gap-2">
+            @for (stat of summary; track stat.labelKey) {
+              <div class="min-w-0 rounded-md bg-white/10 px-1 py-1.5 text-center sm:rounded-lg sm:px-2 sm:py-2">
+                <p class="font-display text-sm font-bold leading-none sm:text-lg">{{ stat.valueKey | translate }}</p>
+                <p class="mt-1 truncate text-[9px] leading-tight text-slate-300 sm:text-[10px]">
+                  {{ stat.labelKey | translate }}
+                </p>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="mock-upcoming rounded-xl border border-line bg-white p-3">
+          <p class="text-[10px] font-bold tracking-[0.12em] text-muted uppercase">
+            {{ 'preview.reservations.title' | translate }}
+          </p>
+          <div class="mt-2 divide-y divide-line">
+            @for (row of reservations; track row.titleKey) {
+              <div class="py-2 first:pt-0 last:pb-0">
+                <p class="truncate text-xs font-semibold text-navy">{{ row.titleKey | translate }}</p>
+                <p class="mt-0.5 truncate text-[11px] text-copy">{{ row.metaKey | translate }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      </aside>
+    </div>
+  }
+
+  @if (kind() === 'sessions') {
+    <div class="space-y-1.5 p-2 sm:space-y-2 sm:p-4">
+      @for (row of sessionRows; track row.titleKey) {
+        <div class="flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-2.5 py-2 sm:rounded-xl sm:px-3 sm:py-2.5">
+          <div class="min-w-0">
+            <p class="truncate text-xs font-semibold text-navy sm:text-sm">{{ row.titleKey | translate }}</p>
+            <p class="truncate text-[10px] text-copy sm:text-[11px]">{{ row.metaKey | translate }}</p>
+          </div>
+          <span class="shrink-0 rounded-full bg-navy px-2 py-1 font-mono text-[10px] font-bold text-cyan sm:px-2.5 sm:text-[11px]">
+            {{ 'preview.sessionRows.timer' | translate }}
+          </span>
+        </div>
+      }
+    </div>
+  }
+
+  @if (kind() === 'reservations') {
+    <div class="space-y-1.5 p-2 sm:space-y-2 sm:p-4">
+      @for (row of reservations; track row.titleKey) {
+        <div class="flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-2.5 py-2 sm:rounded-xl sm:px-3 sm:py-2.5">
+          <div class="min-w-0">
+            <p class="truncate text-xs font-semibold text-navy sm:text-sm">{{ row.titleKey | translate }}</p>
+            <p class="truncate text-[10px] text-copy sm:text-[11px]">{{ row.metaKey | translate }}</p>
+          </div>
+          <span class="h-2 w-2 shrink-0 rounded-full bg-sky-400"></span>
+        </div>
+      }
+    </div>
+  }
+
+  @if (kind() === 'operations') {
+    <div class="space-y-1.5 p-2 sm:space-y-2 sm:p-4">
+      @for (row of operationRows; track row.titleKey) {
+        <div class="flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-2.5 py-2 sm:rounded-xl sm:px-3 sm:py-2.5">
+          <div class="min-w-0">
+            <p class="truncate text-xs font-semibold text-navy sm:text-sm">{{ row.titleKey | translate }}</p>
+            <p class="truncate text-[10px] text-copy sm:text-[11px]">{{ row.metaKey | translate }}</p>
+          </div>
+          <span class="h-2 w-2 shrink-0 rounded-full bg-teal"></span>
+        </div>
+      }
+    </div>
+  }
+
+  @if (kind() === 'reports') {
+    <div class="p-2 sm:p-4">
+      <p class="text-[9px] font-bold tracking-[0.12em] text-muted uppercase sm:text-[10px]">
+        {{ 'preview.reports.title' | translate }}
+      </p>
+      <div class="mt-2 flex h-24 items-end gap-1.5 rounded-lg bg-white px-2 pt-3 pb-2 sm:mt-3 sm:h-32 sm:gap-2 sm:rounded-xl sm:px-3 sm:pt-4">
+        @for (bar of reportBars; track bar.labelKey) {
+          <div class="flex min-w-0 flex-1 flex-col items-center gap-1.5 sm:gap-2">
+            <div class="w-full rounded-t-md bg-gradient-to-t from-accent to-cyan" [style.height.%]="bar.height"></div>
+            <span class="max-w-full truncate text-[8px] font-semibold text-muted sm:text-[10px]">{{ bar.labelKey | translate }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

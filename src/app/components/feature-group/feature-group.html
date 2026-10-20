@@ -1,0 +1,28 @@
+<article
+  class="surface-card min-w-0 overflow-hidden p-6"
+  [class.lg:grid]="emphasized()"
+  [class.lg:grid-cols-2]="emphasized()"
+  [class.lg:gap-8]="emphasized()"
+>
+  <div>
+    <span class="grid h-11 w-11 place-items-center rounded-2xl bg-cyan/10 text-cyan-ink">
+      <app-icon [name]="group().icon" />
+    </span>
+    <h3 class="mt-4 text-xl font-semibold text-navy">{{ group().titleKey | translate }}</h3>
+    <p class="mt-2 text-sm leading-7 text-copy">{{ group().bodyKey | translate }}</p>
+    <ul class="mt-4 grid gap-2">
+      @for (item of group().itemKeys; track item) {
+        <li class="flex items-start gap-2 text-sm text-ink">
+          <span class="mt-0.5 text-teal">
+            <app-icon name="check" size="16" />
+          </span>
+          <span>{{ item | translate }}</span>
+        </li>
+      }
+    </ul>
+    <p class="mt-4 text-xs font-semibold tracking-wide text-muted uppercase">{{ 'offers.planned' | translate }}</p>
+  </div>
+  <div class="mt-5 min-w-0 overflow-hidden" [class.lg:mt-0]="emphasized()">
+    <app-product-preview [kind]="group().previewKind" [compact]="true" />
+  </div>
+</article>

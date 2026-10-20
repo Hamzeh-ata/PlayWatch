@@ -1,6 +1,10 @@
 # PlayWatch
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+Marketing website for PlayWatch, venue operations software for independently owned entertainment businesses.
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1 with Tailwind CSS.
+
+Brand name, phone number, copy, and industry content live in `src/app/config/brand.ts`, `src/app/data/`, and `public/i18n/`. There is no backend; primary conversion is the clickable `tel:+962798354093` link.
 
 ## Development server
 

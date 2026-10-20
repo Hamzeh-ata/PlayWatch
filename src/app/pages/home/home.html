@@ -1,0 +1,187 @@
+<section id="home" class="hero-shell relative overflow-hidden text-white">
+  <div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="section-shell relative grid min-w-0 items-center gap-8 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:py-24">
+    <div>
+      <p class="eyebrow eyebrow-light">{{ brand.name }} · {{ 'brand.category' | translate }}</p>
+      <h1 class="mt-5 max-w-xl text-4xl font-extrabold leading-[1.08] text-white md:text-6xl">
+        {{ 'hero.title' | translate }}
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">{{ 'hero.body' | translate }}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <app-cta-button labelKey="cta.requestTrial" [href]="brand.phoneTel" ctaId="hero-trial" />
+        <app-cta-button
+          labelKey="cta.exploreSolutions"
+          href="#solutions"
+          variant="secondary"
+          ctaId="hero-solutions"
+        />
+      </div>
+      <a
+        [href]="brand.phoneTel"
+        class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan"
+        [attr.aria-label]="brand.phoneDisplay"
+      >
+        <app-icon name="phone" size="16" />
+        <span class="phone-ltr">{{ brand.phoneDisplay }}</span>
+      </a>
+    </div>
+
+    <div class="relative min-w-0 w-full overflow-hidden">
+      <div class="device-frame mx-auto max-w-xl lg:max-w-none">
+        <app-product-preview kind="floor" />
+      </div>
+      <p class="mt-3 px-2 text-center text-[11px] leading-5 text-slate-400 sm:text-xs">
+        {{ 'preview.disclaimer' | translate }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="section-pad bg-soft">
+  <div class="section-shell">
+    <p class="eyebrow">{{ 'industries.eyebrow' | translate }}</p>
+    <h2 class="mt-4 max-w-3xl text-3xl font-semibold text-navy md:text-5xl">{{ 'industries.title' | translate }}</h2>
+    <p class="mt-5 max-w-2xl text-base leading-8 text-copy">{{ 'industries.body' | translate }}</p>
+    <div id="billiards" class="mt-12">
+      <app-industry-card [industry]="featuredIndustry" />
+    </div>
+    <div class="mt-6 grid gap-6 lg:grid-cols-2">
+      @for (industry of supportingIndustries; track industry.id) {
+        <div [id]="industry.id">
+          <app-industry-card [industry]="industry" />
+        </div>
+      }
+    </div>
+    <p class="mt-8 text-sm text-muted">{{ 'industries.plannedNote' | translate }}</p>
+  </div>
+</section>
+
+<section id="about" class="section-pad">
+  <div class="section-shell">
+    <p class="eyebrow">{{ 'positioning.eyebrow' | translate }}</p>
+    <h2 class="mt-4 max-w-3xl text-3xl font-semibold text-navy md:text-5xl">{{ 'positioning.title' | translate }}</h2>
+    <p class="mt-5 max-w-2xl text-base leading-8 text-copy md:text-lg">{{ 'positioning.body' | translate }}</p>
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      @for (item of valueProps; track item.titleKey) {
+        <article class="surface-card p-7">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-navy text-cyan">
+            <app-icon [name]="item.icon" />
+          </span>
+          <h3 class="mt-5 text-xl font-semibold text-navy">{{ item.titleKey | translate }}</h3>
+          <p class="mt-3 text-sm leading-7 text-copy">{{ item.bodyKey | translate }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="challenges" class="section-pad">
+  <div class="section-shell">
+    <p class="eyebrow">{{ 'challenges.eyebrow' | translate }}</p>
+    <h2 class="mt-4 max-w-3xl text-3xl font-semibold text-navy md:text-5xl">{{ 'challenges.title' | translate }}</h2>
+    <p class="mt-5 max-w-2xl text-base leading-8 text-copy">{{ 'challenges.body' | translate }}</p>
+    <div class="mt-12 grid gap-4">
+      @for (item of challenges; track item.titleKey) {
+        <article class="surface-card grid gap-5 p-6 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-soft text-navy">
+              <app-icon [name]="item.icon" />
+            </span>
+            <div>
+              <h3 class="text-lg font-semibold text-navy">{{ item.titleKey | translate }}</h3>
+              <p class="mt-2 text-sm leading-7 text-copy">{{ item.bodyKey | translate }}</p>
+            </div>
+          </div>
+          <p class="rounded-2xl bg-soft px-5 py-4 text-sm leading-7 text-ink">{{ item.helpKey | translate }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" class="section-pad bg-soft">
+  <div class="section-shell">
+    <p class="eyebrow">{{ 'offers.eyebrow' | translate }}</p>
+    <h2 class="mt-4 max-w-3xl text-3xl font-semibold text-navy md:text-5xl">{{ 'offers.title' | translate }}</h2>
+    <p class="mt-5 max-w-2xl text-base leading-8 text-copy">{{ 'offers.body' | translate }}</p>
+    <div class="mt-12">
+      <app-feature-group [group]="primaryFeature" [emphasized]="true" />
+    </div>
+    <div class="mt-6 grid gap-6 lg:grid-cols-3">
+      @for (group of secondaryFeatures; track group.id) {
+        <app-feature-group [group]="group" />
+      }
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="section-pad">
+  <div class="section-shell">
+    <p class="eyebrow">{{ 'how.eyebrow' | translate }}</p>
+    <h2 class="mt-4 max-w-3xl text-3xl font-semibold text-navy md:text-5xl">{{ 'how.title' | translate }}</h2>
+    <div class="mt-12 grid gap-6 lg:grid-cols-3">
+      @for (step of howSteps; track step.number) {
+        <article class="relative overflow-hidden rounded-[1.4rem] border border-line bg-white p-7">
+          <p class="font-display text-5xl font-extrabold text-cyan/30">{{ step.number }}</p>
+          <h3 class="mt-4 text-xl font-semibold text-navy">{{ step.titleKey | translate }}</h3>
+          <p class="mt-3 text-sm leading-7 text-copy">{{ step.bodyKey | translate }}</p>
+        </article>
+      }
+    </div>
+    <p class="mt-8 text-sm text-muted">{{ 'how.note' | translate }}</p>
+  </div>
+</section>
+
+<section id="trial" class="bg-navy py-16 text-white md:py-24">
+  <div class="section-shell grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+    <div>
+      <p class="eyebrow eyebrow-light">{{ 'trial.eyebrow' | translate }}</p>
+      <h2 class="mt-4 max-w-2xl text-3xl font-semibold md:text-5xl">{{ 'trial.title' | translate }}</h2>
+      <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">{{ 'trial.body' | translate }}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <app-cta-button labelKey="cta.callAccess" [href]="brand.phoneTel" ctaId="trial-call" />
+        <app-cta-button
+          labelKey="cta.exploreSolutions"
+          href="#solutions"
+          variant="secondary"
+          ctaId="trial-solutions"
+        />
+      </div>
+    </div>
+    <div class="rounded-[1.6rem] border border-white/10 bg-white/5 p-8 text-center">
+      <p class="text-sm font-semibold text-slate-300">{{ 'trial.phoneLabel' | translate }}</p>
+      <a [href]="brand.phoneTel" class="phone-ltr mt-3 block font-display text-3xl font-bold text-cyan md:text-4xl">
+        {{ brand.phoneDisplay }}
+      </a>
+      <p class="mt-4 text-sm leading-7 text-slate-400">{{ 'trial.phoneHelp' | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section-pad">
+  <div class="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <p class="eyebrow">{{ 'faq.eyebrow' | translate }}</p>
+      <h2 class="mt-4 text-3xl font-semibold text-navy md:text-5xl">{{ 'faq.title' | translate }}</h2>
+      <p class="mt-5 text-base leading-8 text-copy">{{ 'faq.body' | translate }}</p>
+    </div>
+    <div>
+      @for (item of faqs; track item.id) {
+        <app-faq-item [item]="item" [open]="openFaqId() === item.id" (toggled)="onFaqToggle($event)" />
+      }
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="bg-soft pb-20">
+  <div class="section-shell">
+    <div class="overflow-hidden rounded-[2rem] bg-navy-deep px-8 py-14 text-white md:px-14">
+      <h2 class="max-w-2xl text-3xl font-semibold md:text-5xl">{{ 'final.title' | translate }}</h2>
+      <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">{{ 'final.body' | translate }}</p>
+      <div class="mt-8 flex flex-wrap items-center gap-5">
+        <app-cta-button labelKey="cta.contact" [href]="brand.phoneTel" variant="light" ctaId="final-contact" />
+        <a [href]="brand.phoneTel" class="phone-ltr text-lg font-bold text-cyan">{{ brand.phoneDisplay }}</a>
+      </div>
+    </div>
+  </div>
+</section>
